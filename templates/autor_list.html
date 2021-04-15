@@ -6,7 +6,7 @@
     <form>
         <input type="text" name="imie" placeholder="imie">
         <input type="text" name="nazwisko" placeholder="nazwisko">
-    <input type="submit" value="szukaj">
+        <input type="submit" value="szukaj">
     </form>
     </p>
     <ul>
@@ -14,4 +14,9 @@
             <li>{{ object }}</li>
         {% endfor %}
     </ul>
+
+
+    {% for item in s.items %}
+        <p>{{ item }}</p>
+    {% endfor %}
 {% endblock %}

@@ -22,10 +22,18 @@ urlpatterns = [
     path("", views.index),
     path("author_list/", views.authors_view),
     path("author/<int:id>/", views.detail_author_view),
-    path("book/<int:id>/", views.detail_book_view),
-    path("book_list/", views.books_view),
+    path("book/<int:id>/", views.DetailBookView.as_view()),
+    path("book_list/", views.BooksView.as_view()),
     path("author_add/", views.author_add_view),
     path("book_add/", views.book_add_view),
+    path("create_sessions/", views.create_session),
+    path("show_all/", views.show_session_all),
+    path("cookies/", views.create_cookies),
+    path("set_session/", views.set_session),
+    path("show_session/", views.show_session),
+    path("del_session/", views.del_session),
+    path('login/', views.login)
+
 
 ]
 

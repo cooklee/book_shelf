@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+    {% csrf_token %}
+    <label>
+        Imię:
+        <input type="text" name="homogeniczny">
+    </label>
+    <input type="submit">
+    </form>
+
+    {% if logged %}
+        Witaj {{ logged }}!
+    {% endif  %}
+{% endblock %}

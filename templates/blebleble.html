@@ -1,0 +1,7 @@
+{{ sessions.items  }}
+<table>
+    <tr><th>KLUCZ</th><th>WARTOSC</th></tr>
+    {% for key, value in sessions.items %}
+        <tr><td>session[{{key}}]</td><td>{{ value }}</td></tr>
+    {% endfor %}
+</table>
